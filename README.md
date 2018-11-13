@@ -1,2 +1,2 @@
 # grievous
-Spring Boot Project With DB Access
+Spring Boot Project With Hibernate
