@@ -18,10 +18,17 @@ public class PersonRepositoryImpl implements PersonRepositoryCustom {
 	@PersistenceContext
     EntityManager entityManager;
 	
+//	@Override
+//    public List<Person> findNameLike(String name) {
+//        Query query = entityManager.createNativeQuery("SELECT * FROM Person p WHERE UPPER(p.name) LIKE ?", Person.class);
+//        query.setParameter(1, name.toUpperCase()+"%");
+//        return query.getResultList();
+//    }
+	
 	@Override
     public List<Person> findNameLike(String name) {
-        Query query = entityManager.createNativeQuery("", Person.class);
-        query.setParameter(1, name + "%");
+        Query query = entityManager.createQuery("FROM Person p WHERE UPPER(p.name) LIKE :name", Person.class);
+        query.setParameter("name", name.toUpperCase()+"%");
         return query.getResultList();
     }
 }
