@@ -1,3 +1,3 @@
 # grievous
 
-Spring Boot Project With Hibernate
+Spring Boot Project With Spring Data JPA
