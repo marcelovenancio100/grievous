@@ -1,1 +1,1 @@
-# Spring Boot Project With Spring Data JPA
+# Project Starter with Spring Data JPA
